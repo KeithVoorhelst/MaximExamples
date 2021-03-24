@@ -2,6 +2,7 @@
 using Syntra.Models;
 using Syntra.MVCAdvanced.DB;
 using Syntra.MVCAdvanced.Services.Interfaces;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Syntra.MVCAdvanced.Services
@@ -17,11 +18,32 @@ namespace Syntra.MVCAdvanced.Services
         {
             return await _context.Teachers.FirstOrDefaultAsync(x => x.Id == id);
         }
+
         public async Task<Teacher> UpdateAsync(Teacher teacherToSave)
         {
             _context.Teachers.Update(teacherToSave);
             await _context.SaveChangesAsync();
             return teacherToSave;
+        }
+
+        public async Task<List<Teacher>> GetAllAsync()
+        {
+            return await _context.Teachers.ToListAsync();
+        }
+
+        public async Task<Teacher> CreateAsync(Teacher teacher)
+        {
+            _context.Teachers.Add(teacher);
+            await _context.SaveChangesAsync();
+            return teacher;
+        }
+
+        public async Task<Teacher> Delete(int id)
+        {
+            var teacherToDelete = await _context.Teachers.FirstOrDefaultAsync(x => x.Id == id);
+            _context.Remove(teacherToDelete);
+            await _context.SaveChangesAsync();
+            return teacherToDelete;
         }
     }
 }

@@ -22,6 +22,12 @@ namespace Syntra.MVCAdvanced.Controllers
             _teacherService = teacherDbService;
             _mapper = mapper;
         }
+        public async Task<IActionResult> Index()
+        {
+            List<Teacher> teachers = await _teacherService.GetAllAsync();
+            List<TeacherDetailsVM> teachersVM = _mapper.Map<List<TeacherDetailsVM>>(teachers);
+            return View(teachersVM);
+        }
 
         public async Task<IActionResult> Details(int id)
         {
@@ -58,5 +64,55 @@ namespace Syntra.MVCAdvanced.Controllers
             }
             return View(teacherVM); // De view was niet valid, maak opnieuw de view met de invalid teacherVM
         }
+
+        public async Task<IActionResult> GetAll()
+        {
+
+            var teacherList = await _teacherService.GetAllAsync();
+            return View(teacherList);
+        }
+
+        public  IActionResult Create()
+        {
+            //var teachers = _teacherService.GetAllAsync();
+            
+            return View();
+        }
+
+        [HttpPost, ActionName("Create")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Salary")] TeacherDetailsVM teacherDetailsVM)
+        {
+
+            if (ModelState.IsValid)
+            {
+                var teacherToCreate = _mapper.Map<Teacher>(teacherDetailsVM); // maak van de vm een teacher object
+                var createdTeacher = await _teacherService.CreateAsync(teacherToCreate); // geef het teacher object mee aan de update functie
+                return RedirectToAction(nameof(Index));
+
+            }
+            return View(teacherDetailsVM);
+        }
+        // GET: TeachersAutoGen/Delete/5
+        public async Task<IActionResult> Delete(int id)
+        {
+            var teacher = await _teacherService.GetOneAsync(id);
+            if (teacher == null)
+            {
+                return NotFound();
+            }
+
+            return View(teacher);
+        }
+
+        // POST: TeachersAutoGen/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var teacher = await _teacherService.Delete(id);
+            return RedirectToAction(nameof(Index));
+        }
+                
     }
 }

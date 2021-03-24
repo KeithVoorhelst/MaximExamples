@@ -1,4 +1,5 @@
 ﻿using Syntra.Models;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Syntra.MVCAdvanced.Services.Interfaces
@@ -7,5 +8,8 @@ namespace Syntra.MVCAdvanced.Services.Interfaces
     {
         Task<Teacher> GetOneAsync(int id);
         Task<Teacher> UpdateAsync(Teacher teacherToSave);
+        Task<List<Teacher>> GetAllAsync();
+        Task<Teacher> CreateAsync(Teacher teacher);
+        Task<Teacher> Delete(int id);
     }
 }

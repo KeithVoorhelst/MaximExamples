@@ -1,0 +1,18 @@
+﻿@model List<Syntra.Models.Teacher>
+@{
+    ViewData["Title"] = "GetAll";
+}
+
+<h1>List</h1>
+
+<h4>Teachers</h4>
+<hr />
+
+@foreach (var item in Model)
+{
+
+
+
+    <p> @item.FirstName @item.LastName - €@item.Salary</p>
+
+}

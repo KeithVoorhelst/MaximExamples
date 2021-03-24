@@ -21,11 +21,11 @@ namespace Syntra.MVCAdvanced.DB
                     var teacher1 = new Teacher();
                     teacher1.FirstName = "Guy";
                     teacher1.LastName = "CryptoDev";
-                    teacher1.Salary = 10000;
+                    teacher1.Salary = 2000;
                     var teacher2 = new Teacher();
                     teacher2.FirstName = "Bart";
                     teacher2.LastName = "Van Gucht";
-                    teacher2.Salary = 1000000;
+                    teacher2.Salary = 2000;
                     context.Add(teacher1);
                     context.Add(teacher2);
                     context.SaveChanges();

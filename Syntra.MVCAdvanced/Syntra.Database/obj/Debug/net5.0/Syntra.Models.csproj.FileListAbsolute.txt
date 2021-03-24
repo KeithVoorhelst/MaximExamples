@@ -10,3 +10,14 @@ E:\code\Syntra.MVCAdvanced\Syntra.Database\obj\Debug\net5.0\Syntra.Models.csproj
 E:\code\Syntra.MVCAdvanced\Syntra.Database\obj\Debug\net5.0\Syntra.Models.dll
 E:\code\Syntra.MVCAdvanced\Syntra.Database\obj\Debug\net5.0\ref\Syntra.Models.dll
 E:\code\Syntra.MVCAdvanced\Syntra.Database\obj\Debug\net5.0\Syntra.Models.pdb
+C:\Users\kvoor\OneDrive\Documents\GitHub\MaximExamples\Syntra.MVCAdvanced\Syntra.Database\bin\Debug\net5.0\Syntra.Models.deps.json
+C:\Users\kvoor\OneDrive\Documents\GitHub\MaximExamples\Syntra.MVCAdvanced\Syntra.Database\bin\Debug\net5.0\Syntra.Models.dll
+C:\Users\kvoor\OneDrive\Documents\GitHub\MaximExamples\Syntra.MVCAdvanced\Syntra.Database\bin\Debug\net5.0\ref\Syntra.Models.dll
+C:\Users\kvoor\OneDrive\Documents\GitHub\MaximExamples\Syntra.MVCAdvanced\Syntra.Database\bin\Debug\net5.0\Syntra.Models.pdb
+C:\Users\kvoor\OneDrive\Documents\GitHub\MaximExamples\Syntra.MVCAdvanced\Syntra.Database\obj\Debug\net5.0\Syntra.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kvoor\OneDrive\Documents\GitHub\MaximExamples\Syntra.MVCAdvanced\Syntra.Database\obj\Debug\net5.0\Syntra.Models.AssemblyInfoInputs.cache
+C:\Users\kvoor\OneDrive\Documents\GitHub\MaximExamples\Syntra.MVCAdvanced\Syntra.Database\obj\Debug\net5.0\Syntra.Models.AssemblyInfo.cs
+C:\Users\kvoor\OneDrive\Documents\GitHub\MaximExamples\Syntra.MVCAdvanced\Syntra.Database\obj\Debug\net5.0\Syntra.Models.csproj.CoreCompileInputs.cache
+C:\Users\kvoor\OneDrive\Documents\GitHub\MaximExamples\Syntra.MVCAdvanced\Syntra.Database\obj\Debug\net5.0\Syntra.Models.dll
+C:\Users\kvoor\OneDrive\Documents\GitHub\MaximExamples\Syntra.MVCAdvanced\Syntra.Database\obj\Debug\net5.0\ref\Syntra.Models.dll
+C:\Users\kvoor\OneDrive\Documents\GitHub\MaximExamples\Syntra.MVCAdvanced\Syntra.Database\obj\Debug\net5.0\Syntra.Models.pdb
