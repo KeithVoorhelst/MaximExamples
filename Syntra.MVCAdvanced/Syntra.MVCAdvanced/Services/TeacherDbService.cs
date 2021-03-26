@@ -3,8 +3,10 @@ using Microsoft.EntityFrameworkCore;
 using Syntra.Models;
 using Syntra.MVCAdvanced.DB;
 using Syntra.MVCAdvanced.Services.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace Syntra.MVCAdvanced.Services
 {
@@ -24,6 +26,18 @@ namespace Syntra.MVCAdvanced.Services
         public async Task<Teacher> GetOneAsync(int id)
         {
             return await _context.Teachers.FirstOrDefaultAsync(x => x.Id == id);
+        }
+
+        public async Task<List<Teacher>> Index(string searchString)
+        {
+            var teachersTS = from t in _context.Teachers select t;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                teachersTS = teachersTS.Where(s => s.FirstName.Contains(searchString) || s.LastName.Contains(searchString));
+            }
+
+            return await teachersTS.ToListAsync();
         }
 
         public async Task<Teacher> UpdateAsync(Teacher teacherToUpdate)

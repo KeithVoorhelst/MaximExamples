@@ -13,5 +13,6 @@ namespace Syntra.MVCAdvanced.Services.Interfaces
         Task<Teacher> CreateAsync(Teacher teacher);
         Task<Teacher> Delete(int id);
         SelectList DropdownTeachers();
+        Task<List<Teacher>> Index(string searchString);
     }
 }

@@ -22,9 +22,10 @@ namespace Syntra.MVCAdvanced.Controllers
             _teacherService = teacherDbService;
             _mapper = mapper;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            List<Teacher> teachers = await _teacherService.GetAllAsync();
+            
+            List<Teacher> teachers = await _teacherService.Index(searchString);
             List<TeacherDetailsVM> teachersVM = _mapper.Map<List<TeacherDetailsVM>>(teachers);
             return View(teachersVM);
         }
