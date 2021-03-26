@@ -1,4 +1,5 @@
-﻿using Syntra.Models;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Syntra.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -11,5 +12,6 @@ namespace Syntra.MVCAdvanced.Services.Interfaces
         Task<List<Teacher>> GetAllAsync();
         Task<Teacher> CreateAsync(Teacher teacher);
         Task<Teacher> Delete(int id);
+        SelectList DropdownTeachers();
     }
 }

@@ -79,7 +79,7 @@ namespace Syntra.MVCAdvanced.Controllers
             return View();
         }
 
-        [HttpPost, ActionName("Create")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Salary")] TeacherDetailsVM teacherDetailsVM)
         {
@@ -93,7 +93,7 @@ namespace Syntra.MVCAdvanced.Controllers
             }
             return View(teacherDetailsVM);
         }
-        // GET: TeachersAutoGen/Delete/5
+        
         public async Task<IActionResult> Delete(int id)
         {
             var teacher = await _teacherService.GetOneAsync(id);
@@ -105,7 +105,6 @@ namespace Syntra.MVCAdvanced.Controllers
             return View(teacher);
         }
 
-        // POST: TeachersAutoGen/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

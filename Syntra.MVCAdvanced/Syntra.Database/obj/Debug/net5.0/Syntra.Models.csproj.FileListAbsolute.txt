@@ -21,3 +21,4 @@ C:\Users\kvoor\OneDrive\Documents\GitHub\MaximExamples\Syntra.MVCAdvanced\Syntra
 C:\Users\kvoor\OneDrive\Documents\GitHub\MaximExamples\Syntra.MVCAdvanced\Syntra.Database\obj\Debug\net5.0\Syntra.Models.dll
 C:\Users\kvoor\OneDrive\Documents\GitHub\MaximExamples\Syntra.MVCAdvanced\Syntra.Database\obj\Debug\net5.0\ref\Syntra.Models.dll
 C:\Users\kvoor\OneDrive\Documents\GitHub\MaximExamples\Syntra.MVCAdvanced\Syntra.Database\obj\Debug\net5.0\Syntra.Models.pdb
+C:\Users\kvoor\OneDrive\Documents\GitHub\MaximExamples\Syntra.MVCAdvanced\Syntra.Database\obj\Debug\net5.0\Syntra.Models.csprojAssemblyReference.cache

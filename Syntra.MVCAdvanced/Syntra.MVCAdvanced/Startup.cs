@@ -33,6 +33,8 @@ namespace Syntra.MVCAdvanced
             //services.AddSingleton<ITeacherDbService, TeacherDbService>(); // 1 X new TeacherDbService geeft dat aan alle 10!
             //services.AddTransient<ITeacherDbService, TeacherDbService>(); // 10 X new TeacherDbService geeft dan aan alle 10 een nieuwe!
             services.AddScoped<ITeacherDbService, TeacherDbService>(); // 10 X new TeacherDbService geeft dan aan alle 10 een nieuwe!
+            services.AddScoped<ILocationService, LocationService>();
+            services.AddScoped<ICourseService, CourseService>();
 
             services.AddDbContext<DanceSchoolDbContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("letsDanceConnectionString")));

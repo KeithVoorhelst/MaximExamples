@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Syntra.Models;
 using Syntra.MVCAdvanced.DB;
 using Syntra.MVCAdvanced.Services.Interfaces;
@@ -14,16 +15,22 @@ namespace Syntra.MVCAdvanced.Services
         {
             _context = context;
         }
+        public SelectList DropdownTeachers()
+        {
+            SelectList dropdownTeachers = new SelectList(_context.Teachers, "Id", "FirstName");
+            return dropdownTeachers;
+
+        }
         public async Task<Teacher> GetOneAsync(int id)
         {
             return await _context.Teachers.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task<Teacher> UpdateAsync(Teacher teacherToSave)
+        public async Task<Teacher> UpdateAsync(Teacher teacherToUpdate)
         {
-            _context.Teachers.Update(teacherToSave);
+            _context.Teachers.Update(teacherToUpdate);
             await _context.SaveChangesAsync();
-            return teacherToSave;
+            return teacherToUpdate;
         }
 
         public async Task<List<Teacher>> GetAllAsync()
